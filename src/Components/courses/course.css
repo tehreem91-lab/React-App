@@ -1,0 +1,62 @@
+
+.card-container
+{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* justify-content: space-between; */
+}
+.class-heading
+{
+    
+    margin-top: 8%;
+    margin-left: 3%; 
+    color: #ffcc00;
+    position: relative;   
+}
+.class-heading:hover
+{
+    color: #fa5722;
+    
+    cursor: pointer;
+    
+}
+.card-back
+{
+    height: 50vh;
+    /* background:linear-gradient(rgba(20, 75, 133, 0.795),rgba(20, 75, 133, 0.795)) ; */
+}
+.card1
+{
+    border-radius: 2% ;
+    margin-top: 2%;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    background-color: #fa5722;
+}
+
+.card1:hover
+{
+    cursor: pointer;
+    opacity: 0.8;
+    border-style: double;
+    background-color: #0d355f;
+}
+@media screen and (max-width: 768px) {
+.card-back
+{
+    height: 80vh;
+   
+}
+.class-heading
+{
+    margin-left: 10%; 
+    margin-top: 40%;
+    position: relative;
+     
+}
+    
+}
