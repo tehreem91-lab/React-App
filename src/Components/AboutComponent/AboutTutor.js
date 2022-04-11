@@ -106,7 +106,7 @@ const Abouttutor = () => {
             <span>Find the Right tutor for you</span>
             <h1 className="feature_heading">Featured Tutors</h1>
           </div>
-          <div className="fearuretutor_section bg-dark ">
+          <div className="fearuretutor_section  ">
             <div className="row">
               {FeatureTutor.map((item) => {
                 return (
