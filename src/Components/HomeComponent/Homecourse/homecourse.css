@@ -1,0 +1,47 @@
+.course
+{
+  height:80vh;
+  position: relative;
+  margin-top: 8%;
+  background: linear-gradient(rgba(59, 58, 58, 0.6),rgba(62, 59, 59, 0.7)),url('/src/Assests/Home/course.jpg');  ;
+  background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+}
+.course_heading
+{
+  width: 30%;
+  position: relative;
+  top: 35%;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+.course_button
+{
+  padding: 12px 20px 12px 20px;
+  border: none;
+  font-size: 17px;
+  position: relative;
+  top: 98%;
+  border-radius: 7px;
+  color: white;
+  background-color: #f46b3e;
+}
+.main_courseheading 
+{
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .course
+  {
+    height:70vh;
+    margin-top: 100px;
+  
+  }
+  .course_heading
+  {
+    width: 60%;
+  }
+  
+}

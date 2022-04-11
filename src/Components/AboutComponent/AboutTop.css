@@ -1,0 +1,125 @@
+.about
+{
+    position: relative;
+    margin-top: 6%;
+
+}
+.about_main
+{
+    margin-top: 120px;
+    padding: 25px;
+}
+.about_main_heading
+{
+    color: #0d355f;
+   font-weight: bold;
+   margin-top: 10px;
+   line-height: 40px;
+
+}
+.about_sub_heading
+{
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 5px;
+   text-align: justify;
+
+
+}
+.abouttop_image
+{
+    margin-left: 50px;
+    margin-top: 0px;
+}
+.about_back
+{
+    height: 500px;
+   background: linear-gradient(rgba(6, 48, 92, 0.795),rgba(11, 61, 113, 0.795)),url('../../Assests//About/about2.jpeg'); 
+   background: cover;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+}
+.aboutback_heading
+{
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+.about_back1
+{
+  
+    position: relative;
+    top: 20%;
+    padding: 10px;
+   
+}
+.table_section
+{
+    margin-top: 60px;
+}
+.table_icon
+{
+   margin-left:50px;
+   font-size: 35px;
+   color: #ffcc00;
+}
+.table_heading
+{
+    color: white;
+    font-size: 25px;
+}
+.table_image
+{
+    width: 800px;
+    height: 400px;
+    margin-top: 10%;
+}
+@media screen and (max-width: 768px) {
+    .about
+    {
+        position: relative;
+        margin-top: 20%;
+    }
+    .about_back
+    {
+        height: 800px;
+    }
+    .about_main
+    {
+        margin-top:0px;
+       
+    }
+.about_sub_heading
+{
+    font-size: 14px;
+}
+.abouttop_image
+{
+    margin:auto;
+} 
+.aboutback_heading
+{
+    font-size: 25px;
+   
+} 
+.about_back1
+{
+    position: relative;
+    top: 10%;
+    padding: 35px;
+}
+.table_icon
+{
+    margin-left: 0px;
+    font-size: 30px;
+    margin-top: 14px;
+}
+.table_heading
+{
+ 
+    margin-top: 14px;
+    font-size: 20px;
+}
+    
+}

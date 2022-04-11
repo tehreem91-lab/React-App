@@ -11,6 +11,7 @@ import './carousel.css'
 const MainCarousel = () => {
   return (
     <>
+  
       <Carousel autoplay effect="fade">
         <div>
           <div className="slide1">

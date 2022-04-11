@@ -15,7 +15,7 @@ const Course = () => {
     <div >
       <div className="container-fluid">
         <div className="container"> <br/>
-          <h1 className="class-heading fs-3 ">Class 9th</h1>
+          <h1 className="class-heading  ">Class 9th</h1>
         </div>
       </div>
       <div className="container-fluid">
@@ -50,7 +50,7 @@ const Course = () => {
 <div>
       <div className="container-fluid">
         <div className="container">
-          <h1 className="class-heading fs-3">Class 10th</h1>
+          <h1 className="class-heading">Class 10th</h1>
         </div>
       </div>
       <div className="container-fluid">
@@ -85,7 +85,7 @@ const Course = () => {
       <div>
       <div className="container-fluid">
         <div className="container">
-          <h1 className="class-heading fs-3">Class 11th</h1>
+          <h1 className="class-heading ">Class 11th</h1>
         </div>
       </div>
       <div className="container-fluid">
@@ -121,7 +121,7 @@ const Course = () => {
       <div className="card-back">
       <div className="container-fluid">
         <div className="container">
-          <h1 className="class-heading fs-3">Class 12th</h1>
+          <h1 className="class-heading">Class 12th</h1>
         </div>
       </div>
       <div className="container-fluid">

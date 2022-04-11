@@ -1,60 +1,73 @@
-import React from 'react';
-import 
-{   FaEtsy,
-    FaFortAwesome,
-    FaBiohazard,
-    FaMosque,
-    FaVectorSquare,
-    FaDatabase,
-    FaMediumM
-} from 'react-icons/fa';
-import {MdOutlineAccountBalanceWallet} from 'react-icons/md'
-import {GiChemicalTank,GiArabicDoor,GiHumanPyramid} from  'react-icons/gi'
-import {RiComputerFill} from 'react-icons/ri'
-import './subject.css';
-const  Subject=()=>
-{
-   return(
-       <>  
-       <div className='subject '>
-         <div className='container fs-3'> <h1>Most Popupar Subject</h1></div>
-       <div className='container-fluid  h-100 '>
-      
-           <div className='container bg-white mt-3 '>
-        
-            <div className='row border-bottom '>
-                  
-                   <div className='col-md-4 p-5 border-end clm'><FaEtsy className=' text-warning h-100  '/> English</div>
-                   <div className='col-md-4  p-5  border-end clm'><FaFortAwesome  className=' text-warning h-100 mb-2'/> Urdu</div>
-                   <div className='col-md-4 p-5  border-end clm'> <GiChemicalTank  className=' text-warning h-100'/> Chemistery</div>
-               
-               </div>
+import React from "react";
+import {
+  BookFilled,
+  PieChartFilled,
+  MedicineBoxFilled,
+  HistoryOutlined,
+} from "@ant-design/icons";
+import { GiChemicalTank } from "react-icons/gi";
+import { ArrowLeftOutlined } from "@ant-design/icons";
+import {Link} from 'react-router-dom'
+// import {
+//   FaEtsy,
+//   FaFortAwesome,
+//   FaBiohazard,
+//   FaMosque,
+//   FaVectorSquare,
+//   FaDatabase,
+//   FaMediumM,
+// } from "react-icons/fa";
+// import { MdOutlineAccountBalanceWallet } from "react-icons/md";
+// import { GiChemicalTank, GiArabicDoor, GiHumanPyramid } from "react-icons/gi";
+// import { RiComputerFill } from "react-icons/ri";
+import "./subject.css";
+const Subject = () => {
+  return (
+    <>
+      <div className="container_fluid subject">
+        <div className="container">
+          <h1 className="subject_heading ">
+            Useful <span className="text-warning"> Information</span>{" "}
+          </h1>
+          <div className="subject_box">
+            <div className="inner_subject_box">
+              <h1 className="fs-4 text-warning">Most Popular</h1>
+              <h1 className="fs-2 trending ">Trending Subjects</h1>
+              <div className="row mt-2">
+                <div className="col-6"> <a href="/findtutor" target='blank'>English</a></div>
+                <div className="col-6"><a href="/findtutor" target='blank'>Physics</a></div>
+              </div>
+              <div className="row">
+                <div className="col-6"> <a href="/findtutor" target='blank'>Chemistery</a></div>
+                <div className="col-6"><a href="/findtutor" target='blank'>Biology</a></div>
+              </div>
+              <div className="row">
+                <div className="col-6"> <a href="/findtutor" target='blank'>English</a></div>
+                <div className="col-6"><a href="/findtutor" target='blank'>Physics</a></div>
+              </div>
+              <div className="row">
+              <div className="col-6"> <a href="/findtutor" target='blank'>ComputerScience</a></div>
+                <div className="col-6"><a href="/findtutor" target='blank'>Urdu</a></div>
+              </div>
+              <div className="row">
+              <div className="col-6"> <a href="/findtutor" target='blank'>Islamiat</a></div>
+                <div className="col-6"><a href="/findtutor" target='blank'>Social Study</a></div>
+              </div>
+              <div className="row">
+              <div className="col-6"> <a href="/findtutor" target='blank'>Accounting</a></div>
+                <div className="col-6"><a href="/findtutor" target='blank'>Statistics</a></div>
+                </div>
+              <Link to="findtutor" className="go_tutor mt-2">
+                {" "}
+                <ArrowLeftOutlined className="home_icon" /> More Subjects
+              </Link>
+            </div>
 
-               <div className='row border-bottom'>
-               
-                   <div className='col-md-4 p-5 border-end clm'> <FaMosque  className=' text-warning h-100 mb-2'/> Arabic</div>
-                   <div className='col-md-4  p-5  border-end clm'> <FaBiohazard  className=' text-warning h-100  mb-2'/> Biology</div>
-                   <div className='col-md-4 p-5  border-end clm'> <FaVectorSquare  className=' text-warning h-100'/> Phyics</div>
-               </div>
-
-               <div className='row border-bottom '>
-               
-                   <div className='col-md-4 p-5 border-end clm'> <RiComputerFill className='text-warning h-100 mb-2'/> Computer Science</div>
-                   <div className='col-md-4  p-5  border-end clm'> <FaDatabase className='text-warning h-100 mb-2'/> Database</div>
-                   <div className='col-md-4 p-5  border-end clm'> <MdOutlineAccountBalanceWallet className='text-warning h-100 mb-1'/> Accounting</div>
-               </div>
-
-               <div className='row border-bottom'>
-            
-               <div className='col-md-4 p-5 border-end clm'> <FaMediumM className='text-warning h-100 mb-2'/> Mathematics</div>
-                   <div className='col-md-4  p-5  border-end clm'> <GiHumanPyramid className='text-warning h-100 mb-2'/> HRM</div>
-                   <div className='col-md-4 p-5  border-end clm'>  <GiArabicDoor className='text-warning h-100 mb-2'/>Islamiat</div>
-               </div>
-            
-           </div>
-           </div>
-       </div>
-       </>
-   )
-}
-export default Subject
+          </div>
+        </div>
+      </div>
+     
+    </>
+  );
+};
+export default Subject;

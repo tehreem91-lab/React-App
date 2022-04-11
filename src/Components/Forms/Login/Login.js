@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 // import { auth } from "../../../Api/axios";
 import { toast } from "react-toastify";
 import axios from "axios";
+import {ArrowLeftOutlined} from '@ant-design/icons'
 
 import "./login.css";
 import {
@@ -58,7 +59,9 @@ export default function Login() {
       <div className="container-fluid pt-4 main_wrapper">
         <div className="container pt-3 pb-3 inside_wrapper">
           <div className="container in_wrapper login-wrapper mt-5">
+            
             <div className="main_heading mt-5">
+            <Link to='/' className="go_back"> <ArrowLeftOutlined className="home_icon"/> Go back to Home</Link>
               <h1 className="register_heading fs-3 mt-4">Login</h1>
               <h6 className="already mt-2">
                 Don't have an account ? <span className="move">
@@ -104,11 +107,13 @@ export default function Login() {
                   <button className="btn_submit" onClick={LOGIN}>
                   {loading ? <Spinner animation="border" size="sm" /> : "Login"}
                   </button>
+                  
                 </form>
+               
               </div>
               <div className="col-md-5 text-center">
                 <div className="IMAGE">
-                  <img src={FooterLogo} alt="" className="w-50 mt-4 m-auto " />
+                  <img src={FooterLogo} alt="" className="w-50 h-50 mt-3 m-auto " />
                 </div>
               </div>
             </div>

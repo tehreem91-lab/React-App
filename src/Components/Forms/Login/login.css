@@ -11,6 +11,7 @@
   
    margin-top: 8%;
    background-size: cover;
+   height: 500px;
   border-radius: 7px;
   background-color:#0d355f ;
   background-repeat: no-repeat;
@@ -92,6 +93,20 @@
   margin: auto;
   font-family: 'Nunito', sans-serif;
   margin-top: 20px;
+}
+.IMAGE
+{
+  width: 400px;
+}
+.go_back
+{
+  /* margin-left: 20px; */
+  color: #ffcc00;
+}
+.home_icon
+{
+  position: relative;
+  bottom: 3px;
 }
 @media screen and (max-width: 768px) {
   .main_heading {

@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 // import { FiLogIn } from "react-icons/fi";
 // import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 import "./signup.css";
 import {
   UserOutlined,
@@ -15,7 +16,7 @@ import {
   EyeTwoTone,
   KeyOutlined,
 } from "@ant-design/icons";
-import {auth } from "../../../Api/axios";
+import { auth } from "../../../Api/axios";
 // import auth from '../../../Api/axios/';
 
 export default function Signup() {
@@ -28,14 +29,15 @@ export default function Signup() {
   const [role, setrole] = useState("");
   const [contact, setcontact] = useState("");
   const [password, setpassword] = useState("");
-  const [cpassword, setcpassword] = useState("");
+  const [confirmpassword, setConfirmpassword] = useState("");
   const [pic, setPic] = useState();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const [isError, setIsError] = useState();
   const fullName = firstName + " " + lastName;
   const navigate = useNavigate();
   const REGISTER = async (e) => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     await auth
       .post("/register", {
         name: fullName,
@@ -50,7 +52,7 @@ export default function Signup() {
       .then((res) => {
         console.log(res.data);
         toast.success("user register successfully");
-        setLoading(false)
+        setLoading(false);
         navigate("/login");
       })
 
@@ -84,6 +86,16 @@ export default function Signup() {
         });
     }
   };
+  const CheckValidation = (e)=>
+  {
+     const confrimPass = e.target.value;
+     setConfirmpassword(confrimPass)
+     if(password!==confrimPass) {
+      setIsError("confirm password should be match with password");
+     }else{
+       setIsError("");
+     }
+  }
 
   return (
     <>
@@ -91,10 +103,18 @@ export default function Signup() {
         <div className="container pt-3 pb-3 INSIDE_wrapper mt-4">
           <div className="container in_wrapper">
             <div className="main_heading">
-              <h1 className="register_heading fs-3">Register your account</h1>
+              <Link to="/" className="go_back">
+                {" "}
+                <ArrowLeftOutlined className="home_icon" /> Go back to Home
+              </Link>
+              <h1 className="register_heading fs-3 mt-2">
+                Register your account
+              </h1>
               <h6 className="already">
                 Already register ?
-                <span className="move"> <Link to="/login" className="text-warning">
+                <span className="move">
+                  {" "}
+                  <Link to="/login" className="text-warning">
                     Login
                   </Link>
                 </span>
@@ -218,6 +238,7 @@ export default function Signup() {
                       value={password}
                       onChange={(e) => setpassword(e.target.value)}
                     />
+                    
                   </div>
                   <div className="col-md-6">
                     <label className="input_label">Confirm Password:</label>
@@ -230,9 +251,10 @@ export default function Signup() {
                       prefix={<KeyOutlined />}
                       className="input_field"
                       size="large"
-                      value={cpassword}
-                      onChange={(e) => setcpassword(e.target.value)}
+                      value={confirmpassword}
+                      onChange={(e) =>CheckValidation(e)}
                     />
+                   <span className="error_msg">{isError}</span>
                   </div>
                   <div className="col-12">
                     <label className="input_label">
@@ -247,7 +269,11 @@ export default function Signup() {
                     />
                   </div>
                   <button className="btn_submit" onClick={REGISTER}>
-                  {loading ? <Spinner animation="border" size="sm" /> : "Register"}
+                    {loading ? (
+                      <Spinner animation="border" size="sm" />
+                    ) : (
+                      "Register"
+                    )}
                   </button>
                 </form>
               </div>

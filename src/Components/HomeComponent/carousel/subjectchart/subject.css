@@ -1,31 +1,72 @@
-body{
-    background-color: whitesmoke;
+.subject {
 }
-.subject
-{   
-   margin-top: 6%;
- 
-
+.subject_heading {
+  font-size: 35px;
+  /* margin-left: 4%; */
+  font-weight: bold;
+  color: #0d355f;
 }
-.clm:hover
+.trending
 {
-     color: #fe5522a9;
-     cursor: pointer;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0d355f; 
 }
-.clm
+.subject_box {
+  margin: auto;
+  height: 70vh;
+  margin-top: 30px;
+  background: url("/src/Assests/Home/homecourse1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.inner_subject_box
 {
+    width: 550px;
+    padding: 45px;
+    position: relative;
+    top: 40px;
+    line-height: 40px;
+    background-color: white;
+}
+.go_tutor
+{
+    margin-left: 50%;
     font-size: 20px;
-    letter-spacing: 2px;
+    color: #ffcc00;
 }
 
-/* @media screen and (max-width:786px)
+
+@media screen and (max-width:786px)
  {
-.subject
+.inner_subject_box
 {  
-    margin-top:90%;
+    width: 350px;
+    padding: 35px;
+    top: 0;
+    line-height: 25px;
+}
+.go_tutor
+{
+    font-size: 14px;
+}
+.subject_box
+{
+    width: 90%;
+}
+.subject_heading
+{
+    font-size: 24px;
+    margin-left: 13px;
+
+}
+.trending
+{
+    font-size:25px ;
 }
     
-} */
+}
 
 /* .Row-back
 {
@@ -40,3 +81,11 @@ body{
     bottom: 6px;
 
 } */
+@media screen and (max-width: 768px) {
+.subject_box
+    {
+        height: 50vh;
+
+    }
+    
+}

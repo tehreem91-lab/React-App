@@ -72,12 +72,11 @@ function Contactus() {
                   hourse
                 </div>
                 <div className="contact-Link ">
-                  <MailFilled className="contact-icon" />{" "}
-                  <span className="">innovativelearning461@gmail.com</span>
+                  <MailFilled className="contact-icon" /> innovativelearning461@gmail.com
                 </div>
                 <div className="contact-Link">
                   <EnvironmentFilled className="contact-icon" /> University Of
-                  Agriculter Jhail Road Fsd
+                  Agriculture Jail Road Fsd
                 </div>
                 <div className="contact-Link">
                   <PhoneFilled className="contact-icon" /> 014-11230-23

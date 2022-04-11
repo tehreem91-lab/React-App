@@ -13,8 +13,8 @@ const Footer =()=>
         <div className='container-fluid back-footer'>
         <div className='container '>
             <div className='row'>
-                <div className='col-md-2'><img src={FooterLogo} alt="" style={{marginTop:'38%'}}/> </div>
-                <div className='col-md-3 '>
+                <div className='col-md-3 footer_image'><img src={FooterLogo} alt=""  /> </div>
+                <div className='col-md-2 '>
                 <h5 className='head'>Quick LInks</h5> 
                <h6  className='contact-link '><Link  to='/about' >About us </Link></h6> 
                <h6  className='contact-link '><Link to='/findtutor'>Find Tutor </Link></h6>
@@ -23,8 +23,8 @@ const Footer =()=>
                 </div>
                 <div className='col-md-4'>
                  <h5 className='head'>Our Contact</h5>
-                 <h6 className='contact-link mt-3'><MailFilled className='contact-icon'/> innovativelearning461@gmail.com</h6>  
-                 <h6  className='contact-link'><EnvironmentFilled className='contact-icon' /> University Of Agriculter Jhail Road Fsd</h6>
+                 <h6 className='contact-link '><MailFilled className='contact-icon'/> innovativelearning461@gmail.com</h6>  
+                 <h6  className='contact-link'><EnvironmentFilled className='contact-icon' /> University Of Agriculture Jail Road Fsd</h6>
                  <h6  className='contact-link'><PhoneFilled className='contact-icon' /> 014-11230-23</h6>
                  </div>
                  <div className='col-md-3'>

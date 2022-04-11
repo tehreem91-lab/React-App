@@ -3,7 +3,6 @@
 .Main_wrapper {
   
 
- 
   background-image: url('/src/Assests/pattern.png');
   background-color: #43626f;
  
@@ -99,6 +98,11 @@
 .image{
   margin-top: 20%;
 }
+.error_msg
+{
+  color: white;
+
+}
 
 @media screen and (max-width: 768px) {
   .Main_heading {
@@ -120,6 +124,11 @@
 .image
 {
   display: none;
+}
+.error_msg
+{
+   font-size: 14px; 
+   margin-left: 5px; 
 }
 
 }

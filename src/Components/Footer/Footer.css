@@ -5,7 +5,7 @@
     height: 300px;
     color: gainsboro;
     font-size: 16px;
-    margin-top: 40px;
+    margin-top: 100px;
     font-weight: bolder;
     background-image: url('/src/Assests/pattern.png');
     /* background-image: linear-gradient(to top,#0d355f 0%,#0d355f 1%,#092746 100%); */
@@ -38,16 +38,18 @@
       cursor: pointer;
       color: #fa5722;
   }
-  img 
+  .footer_image img
   {
-      width:120px;
+      width: 150px;
+      margin-top: 70px;
   }
   @media screen and (max-width: 768px)
   {
-    img 
+    .footer_image img
     {
         width:120px;
-        margin: auto;
+        margin-top: 40px;
+        margin-left: 140px;
     }
     .back-footer
     {
@@ -57,5 +59,9 @@
         text-align: center;
       
     } 
+    .contact-link
+    {
+        margin-top: 7px;
+    }
   }
   

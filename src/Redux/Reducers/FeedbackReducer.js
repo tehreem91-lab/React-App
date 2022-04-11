@@ -1,5 +1,6 @@
 const initialState = {
   feedback: [],
+  teacherdata:[],
   profile:{}
 };
 
@@ -18,6 +19,14 @@ const FeedbackReducer = (state = initialState, action) => {
           ...state,
           profile: profile,
         }
+
+        case "GET_TEACHER" :
+        const {teacherdata} = action.payload;
+        return{
+          ...state,
+          teacherdata:teacherdata,
+        }
+        
 
     default:
       return {
