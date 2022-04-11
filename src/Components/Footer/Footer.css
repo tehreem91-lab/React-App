@@ -45,23 +45,36 @@
   }
   @media screen and (max-width: 768px)
   {
-    .footer_image img
+      .footer_image
+      {
+         width: 150px;
+         margin: auto;
+        
+
+      }
+    .footer_image img 
     {
-        width:120px;
+        width:120px; 
+        margin-left: 13px;
         margin-top: 40px;
-        margin-left: 140px;
+        
     }
     .back-footer
     {
         
         height: 800px;
-        justify-content: center;
-        text-align: center;
+       
       
     } 
     .contact-link
     {
         margin-top: 7px;
+        margin: auto;
+    }
+    .footer_text
+    {
+        justify-content: center;
+        text-align: center;
     }
   }
   

@@ -145,7 +145,7 @@ const Tutorsearch = () => {
                       .map((data) => {
                         return (
                           <>
-                            <div className="tutor_card ">
+                            <div className="tutor_card mt-4 ">
                               <div className="row">
                                 <div className="col-md-3">
                                   <div className="tutor_left">

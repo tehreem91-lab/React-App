@@ -30,6 +30,7 @@ const Subject = () => {
             Useful <span className="text-warning"> Information</span>{" "}
           </h1>
           <div className="subject_box">
+            
             <div className="inner_subject_box">
               <h1 className="fs-4 text-warning">Most Popular</h1>
               <h1 className="fs-2 trending ">Trending Subjects</h1>

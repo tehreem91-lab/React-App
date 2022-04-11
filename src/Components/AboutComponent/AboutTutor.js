@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import { CheckOutlined } from "@ant-design/icons";
 import about1 from "../../Assests/About/about1.png";
 import tutor1 from "../../Assests/About/tutor1.PNG";
@@ -88,12 +89,8 @@ const Abouttutor = () => {
                   {/* WE Blieve that every one has capacity to creative, Turitor is
                   a place where people Develop their own potential */}
                 </p>
-                <button className="btn tutor_btn1 mt-5" onClick="/ourcourse">
-                  View Courses
-                </button>
-                <button className="btn  intro_btn2 mt-5" onClick="/findTutor">
-                  Find Your Tutor
-                </button>
+                <Link to="/ourcourse"  className='btn intro_btn1 mt-5'>View Courses</Link>
+                <Link  to="/findtutor" className='btn  intro_btn2 mt-5' >Find Your Tutor</Link>
               </div>
             </div>
           </div>
@@ -128,12 +125,12 @@ const Abouttutor = () => {
                             {item.rate}/per hour
                           </h5>
                           <h4 className="feature_name">{item.name}</h4>
-                          <button
+                          <Link
                             className="btn feature_button mt-2 "
-                            onClick="/findTutor"
+                            to="/findTutor"
                           >
                             Find Your Tutor
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>

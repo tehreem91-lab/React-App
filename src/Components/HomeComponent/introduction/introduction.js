@@ -1,7 +1,7 @@
 import React from "react";
 import './introduction.css';
 import innovative from '../../../Assests/Home/innovative.png'
-import msg from '../../../Assests/Home/msg.gif'
+import { Link } from "react-router-dom";
 const Introduction = () => {
   return (
     <div>
@@ -18,8 +18,8 @@ const Introduction = () => {
                   {/* WE Blieve that every one has capacity to creative, Turitor is
                   a place where people Develop their own potential */}
                 </h6>
-                <button className='btn intro_btn1' onClick='/ourcourse'>View Courses</button>
-                <button className='btn  intro_btn2' onClick='/findTutor'>Find Your Tutor</button>
+                <Link to="/ourcourse"  className='btn intro_btn1'>View Courses</Link>
+                <Link  to="/findtutor" className='btn  intro_btn2' >Find Your Tutor</Link>
               </div>
             </div>
             <div className="col-md-6 ">
