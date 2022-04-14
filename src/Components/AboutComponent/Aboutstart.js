@@ -1,19 +1,19 @@
 import React from "react";
-import "./AboutTop.css";
-import { Link } from "react-router-dom";
+import "./aboutstart.css";
 import { IoSchoolOutline, IoTrophyOutline } from "react-icons/io5";
 import { MdOutlineApproval } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 import about4 from "../../Assests/About/about4.png";
 
-const AboutTop = () => {
+const Aboutstart = () => {
   return (
-    <div>
-      <div className="container_fluid about">
+    <>
+    {/* 1st part */}
+      <div className="container_fluid about_upper">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <div className="about_main ">
+              <div className="about_left bg-warning">
                 <h2 className="text-warning">Our Services</h2>
                 <span className="fs-4">What we do</span>
                 <h1 className="fs-1 about_main_heading">
@@ -28,20 +28,26 @@ const AboutTop = () => {
                   {/* WE Blieve that every one has capacity to creative, Turitor is
                   a place where people Develop their own potential */}
                 </p>
-                <Link to="/ourcourse"  className='btn intro_btn1'>View Courses</Link>
-                <Link  to="/findtutor" className='btn  intro_btn2' >Find Your Tutor</Link>
+                <Link to="/ourcourse" className="btn intro_btn1">
+                  View Courses
+                </Link>
+                <Link to="/findtutor" className="btn  intro_btn2">
+                  Find Your Tutor
+                </Link>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="abouttop_image-box">
+              <div className="about_right">
                 <img src={about4} alt="" className="abouttop_image" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container_fluid about_back bg-dark">
-        <div className="container about_back1">
+      {/* 2nt part */}
+      <div className="container_fluid about_back ">
+        <div className="container ">
+          <div className="about_back1">
           <span className="text-light">All Tutor Are Guaranteed by Us </span>
           <h1 className="aboutback_heading">
             100% <span style={{ color: "#f46b3e" }}>Guarantee</span>
@@ -82,9 +88,11 @@ const AboutTop = () => {
             </div>
           </div>
         </div>
+        </div>
       </div>
-    </div>
+
+    </>
   );
 };
 
-export default AboutTop;
+export default Aboutstart;

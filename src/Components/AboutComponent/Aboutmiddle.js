@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
+import "./middle.css";
+import { Link } from "react-router-dom";
 import { CheckOutlined } from "@ant-design/icons";
 import about1 from "../../Assests/About/about1.png";
 import tutor1 from "../../Assests/About/tutor1.PNG";
 import tutor2 from "../../Assests/About/tutor2.PNG";
 import tutor3 from "../../Assests/About/tutor3.PNG";
-import "./abouttutor.css";
-const Abouttutor = () => {
+const Aboutmiddle = () => {
   const FeatureTutor = [
     {
       name: "Zainul Abidin",
@@ -29,10 +29,9 @@ const Abouttutor = () => {
       image: tutor3,
     },
   ];
-
   return (
-    <div>
-      {/* 3rd part */}
+    <>
+      {/*3rd part  */}
       <div className="container-fluid">
         <div className="container">
           <div className="row">
@@ -43,7 +42,7 @@ const Abouttutor = () => {
             </div>
             <div className="col-md-6">
               <div className="about_tutor_right">
-                <h1 className="fs-1 about_tutor_main_heading">
+                <h1 className="about_tutor_main_heading">
                   We are Tutor and Online Learning Community
                 </h1>
                 <p className="about_tutor_heading mt-3">
@@ -89,16 +88,20 @@ const Abouttutor = () => {
                   {/* WE Blieve that every one has capacity to creative, Turitor is
                   a place where people Develop their own potential */}
                 </p>
-                <Link to="/ourcourse"  className='btn intro_btn1 mt-5'>View Courses</Link>
-                <Link  to="/findtutor" className='btn  intro_btn2 mt-5' >Find Your Tutor</Link>
+                <Link to="/ourcourse" className="btn intro_btn1 mt-5">
+                  View Courses
+                </Link>
+                <Link to="/findtutor" className="btn  intro_btn2 mt-5">
+                  Find Your Tutor
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* 4rd part */}
-      <div className="container-fluid  featuretutor_back">
-        <div className="container  featuretutor_back">
+      {/* 4th part */}
+      {/* <div className="container-fluid  featuretutor_back">
+        <div className="container  ">
           <div className="feature_text">
             <span>Find the Right tutor for you</span>
             <h1 className="feature_heading">Featured Tutors</h1>
@@ -140,11 +143,55 @@ const Abouttutor = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="container_fluid featuretutor_back">
+        <div className="container">
+          <div className="feature_text">
+            <span>Find the Right tutor for you</span>
+            <h1 className="feature_heading">Featured Tutors</h1>
+          </div>
+          <div className="featuretutor_section mt-4">
+            <div className="row">
+            {FeatureTutor.map((item) => {
+                return (
+                  <>
+                    <div className="col-md-4">
+                      <div className="featuretutor_card ">
+                        <div className="featuretutor_image_section">
+                          <img
+                            src={item.image}
+                            alt=""
+                            className="featuretutor_image"
+                          />
+                        </div>
+                        <div className="featuretutor_card_text">
+                          <span style={{ fontSize: "18px" }}>
+                            {item.subject}
+                          </span>
+                          <h5 style={{ fontSize: "15px" }}>
+                            {item.rate}/per hour
+                          </h5>
+                          <h4 className="feature_name">{item.name}</h4>
+                          <Link
+                            className="btn feature_button mt-2 "
+                            to="/findTutor"
+                          >
+                            Find Your Tutor
+                          </Link>
+                        </div>
+                        </div>
+                        </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
-      {/* 5th part */}
+      {/* 5th section */}
       <div className="container_fluid apply_back">
         <div className="container">
-        <h1 className="apply_heading ">
+        <h1 className="apply_heading ms-2 ">
             Apply <span className="text-warning"> Now</span>{" "}
           </h1>
           <div className="main_apply">
@@ -158,8 +205,8 @@ const Abouttutor = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default Abouttutor;
+export default Aboutmiddle;

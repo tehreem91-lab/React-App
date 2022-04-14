@@ -1,15 +1,17 @@
 import React from 'react'
 import Navbar from '../Components/Navbar/Navbar'
-import AboutTop from '../Components/AboutComponent/AboutTop';
-import Abouttutor from '../Components/AboutComponent/AboutTutor';
+import Aboutstart from '../Components/AboutComponent/Aboutstart';
+import Aboutmiddle from '../Components/AboutComponent/Aboutmiddle';
 import Footer from '../Components/Footer/Footer'
 function About()
 {
     return(
         <>
          <Navbar/>
-          <AboutTop/>
-           <Abouttutor/>
+         <Aboutstart/>
+         <Aboutmiddle/>
+          {/* <AboutTop/>
+           <Abouttutor/> */}
   
             <Footer/>
 

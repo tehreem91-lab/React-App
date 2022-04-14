@@ -128,7 +128,7 @@ const Tutorsearch = () => {
                 "loading...."
               ) : (
                 <>
-                  {teacherdata &&
+                  {
                     teacherdata
                       .filter((data) => {
                         if (search === "") {
