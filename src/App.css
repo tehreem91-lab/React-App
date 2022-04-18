@@ -4,6 +4,12 @@ body{
     background-color: whitesmoke !important;
     font-family: 'Nunito', sans-serif
 }
+.preloader 
+{
+   display: block;
+    margin:0 auto;
+    
+}
 ::-webkit-scrollbar
 {
     width: 12px;

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import Aboutstart from '../Components/AboutComponent/Aboutstart';
-import Aboutmiddle from '../Components/AboutComponent/Aboutmiddle';
+// import Aboutmiddle from '../Components/AboutComponent/Aboutmiddle';
 import Footer from '../Components/Footer/Footer'
 function About()
 {
@@ -9,7 +9,7 @@ function About()
         <>
          <Navbar/>
          <Aboutstart/>
-         <Aboutmiddle/>
+         {/* <Aboutmiddle/> */}
           {/* <AboutTop/>
            <Abouttutor/> */}
   

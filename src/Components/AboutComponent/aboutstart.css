@@ -14,6 +14,7 @@
 {
     color: #0d355f;
    font-weight: bold;
+   font-size: 30px;
    margin-top: 10px;
    line-height: 40px;
 
@@ -73,6 +74,42 @@
     color: white;
     font-size: 25px;
 }
+.featuretutor_image {
+    width: 380px;
+    height: 350px;
+    margin: auto;
+  }
+  .featuretutor_card_text {
+    padding: 10px;
+    width: 380px;
+    margin: auto;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+  }
+  .feature_name {
+    font-size: 25px;
+    color: chocolate;
+    font-weight: bold;
+  }
+  .feature_button {
+    padding: 7px 15px 7px 15px;
+    color: white;
+    border-radius: 10px;
+    background-color: #f1984ae0;
+  }
+  .featuretutor_back {
+    margin-top: 80px;
+  }
+  /* .feature_text {
+    justify-content: center;
+    text-align: center;
+  } */
+  .feature_heading {
+    font-size: 35px;
+    font-weight: bold;
+    color: #0d355f;
+  }
 /* .table_image
 {
     width: 800px;
@@ -87,6 +124,7 @@
     }
     .about_back
     {
+        margin-top: 90px;
         height: 750px;
     }
     .about_back1
@@ -100,7 +138,7 @@
     }
     .about_main_heading
     {
-        font-size: 28px;
+        font-size: 23px;
     }
 .about_sub_heading
 {
@@ -134,5 +172,32 @@
     margin-top: 14px;
     font-size: 20px;
 }
+.featuretutor_card {
+    margin-top: 25px;
+  }
+  .featuretutor_image {
+    width: 300px;
+    height: 300px;
+  }
+  .featuretutor_card_text {
+    width: 300px;
+    margin: auto;
+  }
+  .feature_text {
+    width: 250px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
+
+  .feature_name {
+    font-size: 20px;
+  }
+  .feature_heading {
+    font-size: 30px;
+  }
+ 
+ 
+ 
     
 }
