@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
+import Calendar from 'react-calendar'
 import "./tutorsearch.css";
+import { Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
+import 'react-calendar/dist/Calendar.css';
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-// import img1 from "../../Assests/Tutor/img1.jpg";
-// import img2 from "../../Assests/Tutor/img2.jpeg";
-// import img3 from "../../Assests/Tutor/img3.jpeg";
+import { Spinner, Button } from "react-bootstrap";
 import { SchoolRounded } from "@material-ui/icons";
 import { Form, FormControl } from "react-bootstrap";
 const Tutorsearch = () => {
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
+  const [value, onChange] = useState(new Date());
   // const [loading, setLoading] = useState(false);
   const { teacherdata } = useSelector((state) => state.FeedbackReducer);
 
@@ -28,64 +31,8 @@ const Tutorsearch = () => {
     getTeacher();
   }, []);
 
-  // const TutorData = [
-  //   {
-  //     name: "Brandon Savage",
-  //     email: "abc123@gmail.com",
-  //     rate: "250 Rs",
-  //     contact: "+923064723479",
-  //     qualification: "BSCS Computer Science",
-  //     subject: "computer Science",
-  //     description:
-  //       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
-  //     image: img1,
-  //   },
-  //   {
-  //     name: "Steve Burns",
-  //     rate: "250 Rs",
-  //     email: "abc123@gmail.com",
-  //     qualification: "MS Phyics",
-  //     subject: "Science",
-  //     contact: "+92312171136",
-  //     description:
-  //       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
-  //     address: "USA",
-  //     image: img2,
-  //   },
-  //   {
-  //     name: "Kevin Canlas",
-  //     rate: "250 Rs",
-  //     email: "abc123@gmail.com",
-  //     subject: "Chemistry",
-  //     contact: "+923064723479",
-  //     qualification: "MS Chemistry",
-  //     description:
-  //       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
-  //     address: "USA",
-  //     image: img3,
-  //   },
-  //   {
-  //     name: "Steve Burns",
-  //     rate: "250 Rs",
-  //     email: "abc123@gmail.com",
-  //     subject: "English",
-  //     contact: "+923064723479",
-  //     qualification: "MA English",
-  //     description:
-  //       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
-  //     image: img1,
-  //   },
-  // ];
-  // const FindNow = () => {
-  //   TutorData.filter((data) => {
-  //     if (search === "") {
-  //       return data;
-  //     } else if (data.subject.toLowerCase().includes(search.toLowerCase())) {
-  //       return data;
-  //     }
-  //   });
-  //   console.log("button clicked");
-  // };
+ 
+  
   return (
     <div>
       <div className="tutorheader_section">
@@ -125,120 +72,226 @@ const Tutorsearch = () => {
           <div className="row">
             <div className="col-md-8 ">
               {teacherdata === undefined ? (
-                "loading...."
+                <Button variant="primary" disabled className="m-auto">
+                  <Spinner
+                    as="span"
+                    animation="grow"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                  />
+                  Loading...
+                </Button>
               ) : (
                 <>
-                  {
-                    teacherdata
-                      .filter((data) => {
-                        if (search === "") {
-                          return data;
-                        } else if (
-                          data.subject
-                            .toLowerCase()
-                            .includes(search.toLowerCase()) ||
-                          data.name.toLowerCase().includes(search.toLowerCase())
-                        ) {
-                          return data;
-                        }
-                      })
-                      .map((data) => {
-                        return (
-                          <>
-                            <div className="tutor_card mt-4 ">
-                              <div className="row">
-                                <div className="col-md-3">
-                                  <div className="tutor_left">
-                                    <div className="tutor_image">
-                                      Top Tutor
-                                      <img
-                                        src={data.pic}
-                                        alt=""
-                                        style={{
-                                          width: "100%",
-                                          height: "150px",
-                                          borderRadius: "0px 0px 10px 10px",
-                                        }}
-                                      />
-                                    </div>
+                  {teacherdata
+                    .filter((data) => {
+                      if (search === "") {
+                        return data;
+                      } else if (
+                        data.subject
+                          .toLowerCase()
+                          .includes(search.toLowerCase()) ||
+                        data.name.toLowerCase().includes(search.toLowerCase())
+                      ) {
+                        return data;
+                      }
+                    })
+                    .map((data) => {
+                      return (
+                        <>
+                          <div className="tutor_card mt-4 ">
+                            <div className="row">
+                              <div className="col-md-3">
+                                <div className="tutor_left">
+                                  <div className="tutor_image">
+                                    Top Tutor
+                                    <img
+                                      src={data.pic}
+                                      alt=""
+                                      style={{
+                                        width: "100%",
+                                        height: "150px",
+                                        borderRadius: "0px 0px 10px 10px",
+                                      }}
+                                    />
                                   </div>
                                 </div>
-                                <div className="col-md-9">
-                                  <div className="card_text">
-                                    <div className="row">
-                                      <div className="col-8">
-                                        <h1 className="card_title fs-2">
-                                          {data.name}
-                                        </h1>
-                                        <span className="tutor_qulaification">
-                                          {" "}
-                                          <SchoolRounded /> {data.qualification}
-                                        </span>
-                                      </div>
-                                      <div className="col-4 text-center">
-                                        <span className="tutor_rate text-warning">
-                                          {data.rate} <br />
-                                          Per hour
-                                        </span>
-                                      </div>
+                              </div>
+                              <div className="col-md-9">
+                                <div className="card_text">
+                                  <div className="row">
+                                    <div className="col-8">
+                                      <h1 className="card_title fs-2">
+                                        {data.name}
+                                      </h1>
+                                      <span className="tutor_qulaification">
+                                        {" "}
+                                        <SchoolRounded /> {data.qualification}
+                                      </span>
                                     </div>
-                                    <div className="tutor_contact mt-3">
-                                      Contact: {data.contact}
+                                    <div className="col-4 text-center">
+                                      <span className="tutor_rate text-warning">
+                                        {data.rate} <br />
+                                        Per hour
+                                      </span>
                                     </div>
-                                    <h3 className="tutor_email mt-1 text-info">
-                                      Email:{" "}
-                                      <a
-                                        href="https://gmail.com"
-                                        target="blank"
-                                      >
-                                        {data.email}
-                                      </a>
-                                    </h3>
-                                    <p className="description mt-2 ">
-                                      {data.desc}
-                                    </p>
+                                  </div>
+                                  <div className="tutor_contact mt-3">
+                                    Contact: {data.contact}
+                                  </div>
+                                  <h3 className="tutor_email mt-1 text-info">
+                                    Email:{" "}
+                                    <a href="https://gmail.com" target="blank">
+                                      {data.email}
+                                    </a>
+                                  </h3>
+                                  <p className="description mt-2 ">
+                                    {data.desc}
+                                  </p>
 
-                                    <div className="tutor_subject">
-                                      <div className="row">
-                                        <div className="col-md-8">
-                                          <h4 className="text-warning fs-4 mt-2">
-                                            Subject:
-                                          </h4>
-                                          {data.subject}
-                                        </div>
-                                        <div className="col-md-4 text-center">
-                                          <button className="btn tutor_message ">
-                                            Mesaage
-                                          </button>
-                                        </div>
+                                  <div className="tutor_subject">
+                                    <div className="row">
+                                      <div className="col-md-8">
+                                        <h4 className="text-warning fs-4 mt-2">
+                                          Subject:
+                                        </h4>
+                                        {data.subject}
+                                      </div>
+                                      <div className="col-md-4 text-center">
+                                        <button className="btn tutor_message ">
+                                          Mesaage
+                                        </button>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </>
-                        );
-                      })}
+                          </div>
+                        </>
+                      );
+                    })}
                 </>
               )}
             </div>
 
             <div className="col-md-4">
               <div className=" tutor_right">
-                <h1 className="fs-4 text-center">Subject</h1>
+                <h1 className="fs-4 text-center text-warning">Subject</h1>
 
                 <div className="tutor_right_subject">
-                  <span onClick={() => setSearch("computer science")}>
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("computer science")}
+                  >
                     computer science
                   </span>
-                  <span onClick={() => setSearch("Mathematics")}>
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Physics")}
+                  >
+                    Physics
+                  </span>
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Mathematics")}
+                  >
                     Mathematics
                   </span>
-                  <span onClick={() => setSearch("Statistics")}>
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Biology")}
+                  >
+                    Biology
+                  </span>
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Statistics")}
+                  >
                     Statistics
                   </span>
+                  <br />
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Pak studies")}
+                  >
+                    Pak studies
+                  </span>
+                  <span className="bg_font" onClick={() => setSearch("Urdu")}>
+                    Urdu
+                  </span>
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Chemistry")}
+                  >
+                    chemistry
+                  </span>
+
+                  <br />
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("English")}
+                  >
+                    English
+                  </span>
+                
+
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Science")}
+                  >
+                    Science
+                  </span>
+
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Islamiat")}
+                  >
+                    Islamiat
+                  </span>
+                
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Data Structure")}
+                  >
+                    Data Structure
+                  </span>
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("HRM")}
+                  >
+                    HRM
+                  </span>
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("  Software Engineering")}
+                  >
+                    Software Engineering
+                  </span>
+                  <span className="bg_font" onClick={() => setSearch("Algorithms")}>
+                    Algorithms
+                  </span>
+                  <span
+                    className="bg_font"
+                    onClick={() => setSearch("Database")}
+                  >
+                    Database
+                  </span>
                 </div>
+                <div className='comment_section'>
+                <h1 className="fs-4 text-warning text-center">Comments</h1>
+                <Link to='/feedback'>
+                  <p  className="comment mt-2"> Back-to-School Tutoring is a Proactive Tool Leave You comment here</p>
+                  </Link>
+
+                </div>
+                <div className='calender'>
+                <h1 className="fs-4 text-warning text-center">Calendar</h1>
+                <Calendar onChange={onChange} value={value} className='bg-light m-auto mt-3' />
+
+                </div>
+               
               </div>
             </div>
           </div>

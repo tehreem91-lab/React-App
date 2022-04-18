@@ -68,6 +68,13 @@
  
 
 }
+.down_arrow
+{
+  font-size: 12px;
+  position: relative;
+  bottom: 1px;
+  margin-left: 1px;
+}
 @media screen and (max-width: 768px) {
   .back
   {
@@ -138,6 +145,7 @@
 {
   color: white;
   background-color: #fe5722;
+  padding-bottom: 0px;
   border-radius: 25px;
 
 }

@@ -61,6 +61,7 @@
 {
     padding: 20px;
     color: gray;
+    border-radius: 15px;
     background-color: white;
 }
 .tutor_message
@@ -99,21 +100,40 @@
 }
 .tutor_right
 {
-  padding: 20px;
-
-  margin-top: 17px;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 26px;
   background-color: white;
 }
 .tutor_right_subject
 {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 10px;
+  justify-content: space-between;
   justify-content: space-evenly;
+}
+.bg_font
+{
+  padding: 5px;
+
+  margin-top: 13px;
+  background-color: #fb8662;
 }
 .tutor_right_subject
 {
    cursor: pointer;
+}
+.calender
+{
+  margin-top: 80px;
+}
+.comment_section
+{
+  padding: 20px;
+  margin-top: 60px;
+  justify-content: center;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

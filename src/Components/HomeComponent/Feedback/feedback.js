@@ -41,7 +41,7 @@ const Feedback = () => {
     <>
       <div className="container-fluid back_feedback ">
         <div className="container bg-white ">
-        <div className="main_feedback">
+        <div className="main_feedback" id="main_feedback">
           <div className="row">
             <div className="col-md-5">
               <div className="feedback_left">

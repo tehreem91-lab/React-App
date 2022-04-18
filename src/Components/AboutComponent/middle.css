@@ -7,7 +7,7 @@
 }
 .about_tutor_right {
   margin-top: 140px;
-  padding: 20px;
+  padding: 25px;
 }
 .about_tutor_heading {
   font-size: 17px;
@@ -158,11 +158,11 @@
     margin-top: 25px;
   }
   .featuretutor_image {
-    width: 330px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
   }
   .featuretutor_card_text {
-    width: 330px;
+    width: 300px;
     margin: auto;
   }
 

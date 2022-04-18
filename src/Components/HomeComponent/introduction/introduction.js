@@ -19,7 +19,7 @@ const Introduction = () => {
                   a place where people Develop their own potential */}
                 </h6>
                 <Link to="/ourcourse"  className='btn intro_btn1'>View Courses</Link>
-                <Link  to="/findtutor" className='btn  intro_btn2' >Find Your Tutor</Link>
+                <Link  to="/findtutor" className='btn  intro_btn2 ms-2' >Find Your Tutor</Link>
               </div>
             </div>
             <div className="col-md-6 ">

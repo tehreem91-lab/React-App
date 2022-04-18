@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import navbarlogo from "../../Assests/navbarlogo.png";
 import { Avatar } from "@chakra-ui/react";
 import { Menu, Dropdown } from "antd";
-import { DownOutlined,LogoutOutlined, } from "@ant-design/icons";
+import { DownOutlined, LogoutOutlined } from "@ant-design/icons";
 import { toast } from "react-toastify";
 import "./navbar.css";
 
@@ -25,9 +25,9 @@ const NavbarMain = () => {
   //   setPic(newpic.pic)
   // },[]);
 
-  const gotoProfile=()=>{
-    navigate(`/profile/${userInfo._id}`)
-  }
+  const gotoProfile = () => {
+    navigate(`/profile/${userInfo._id}`);
+  };
 
   const Logout = () => {
     dispatch({ type: "LOGOUT" });
@@ -43,7 +43,14 @@ const NavbarMain = () => {
       </Menu.Item>
       <Menu.Item className="Menu_Items" key="2">
         <button onClick={Logout} className="logout_button">
-          Log Out <LogoutOutlined style={{position:'relative', bottom:'2px',marginBlockStart:'10px'}} />
+          Log Out{" "}
+          <LogoutOutlined
+            style={{
+              position: "relative",
+              bottom: "2px",
+              marginBlockStart: "10px",
+            }}
+          />
         </button>
       </Menu.Item>
     </Menu>
@@ -132,7 +139,7 @@ const NavbarMain = () => {
                           src={userInfo.pic}
                         />
                         <span className="username text-white">
-                          {userInfo.name}
+                          {userInfo.name}{" "}
                           <DownOutlined className="down_arrow" />
                         </span>
                       </button>

@@ -13,7 +13,7 @@ const Aboutstart = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <div className="about_left bg-warning">
+              <div className="about_left">
                 <h2 className="text-warning">Our Services</h2>
                 <span className="fs-4">What we do</span>
                 <h1 className="fs-1 about_main_heading">
@@ -31,7 +31,7 @@ const Aboutstart = () => {
                 <Link to="/ourcourse" className="btn intro_btn1">
                   View Courses
                 </Link>
-                <Link to="/findtutor" className="btn  intro_btn2">
+                <Link to="/findtutor" className="btn  intro_btn2  ms-2">
                   Find Your Tutor
                 </Link>
               </div>

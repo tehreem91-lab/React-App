@@ -8,6 +8,7 @@ import FindTutor from "./pages/FindTutorPage";
 import CoursePage from "./pages/coursespage";
 import Contact from "./pages/contactPage";
 import RegPage from "./pages/Signup";
+import Feedback from "./Components/HomeComponent/Feedback/feedback"
 import LoginPage from "./pages/LoginPage";
 import DetailPage from "./pages/DetailPage";
 import PrivateRoute from "../src/Routes/PrivateRoute";
@@ -29,7 +30,7 @@ function App() {
         <Route path="/ourcourse" element={<CoursePage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<RegPage />} />
-
+        <Route path="/feedback" element={<Feedback />} />
         <Route path="/detail/download/:id/:name" element={<DetailPage />} />
         {/* Routes which are only shown on login  */}
         <Route element={<ProtectedRoutes />}>

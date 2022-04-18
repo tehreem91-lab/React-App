@@ -225,7 +225,11 @@ export default function Signup() {
                     </span>
                   </div>
                   <div className="col-md-6">
-                    <label className="input_label">Password:</label>
+                    <label className="input_label">Password:
+                    <span className="descr text-white">
+                              (You can't change your Password)
+                            </span>
+                    </label>
 
                     <Input.Password
                       placeholder="input password"
@@ -259,6 +263,9 @@ export default function Signup() {
                   <div className="col-12">
                     <label className="input_label">
                       Select Profile Picture:
+                      <span className="descr text-white">
+                              (You upload your profile picture only once)
+                            </span>
                     </label>
                     <input
                       className="form-control"

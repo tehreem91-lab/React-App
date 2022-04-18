@@ -19,7 +19,7 @@ const Detail =()=>
                <div className="col-md-6 right-text book-detail">
                <h3 className="text-warning fs-3">{name}</h3>
                <h4 className="mt-2">by {state[1]}</h4>
-               <h6>{state[2]}</h6>
+               <h6>Acadmic Year: {state[2]}</h6>
                <h6>Downloads: {state[3]}</h6>
                {/* <button className="bg-warning mt-3"><a href={state[4]} rel="no refrence" target='blank'>Read Online</a></button> */}
              <a href={state[4]} rel="no refrence"  target='blank'><button className="bg-warning bttn" style={{marginTop:'10%'}}>Download text Book <DownloadOutlined  className="download" /></button></a>
