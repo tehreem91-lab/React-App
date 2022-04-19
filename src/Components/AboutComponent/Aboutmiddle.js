@@ -1,16 +1,12 @@
 import React from "react";
-import "./aboutstart.css";
+import "./middle.css";
+import { Link } from "react-router-dom";
 import { CheckOutlined } from "@ant-design/icons";
 import about1 from "../../Assests/About/about1.png";
-import { IoSchoolOutline, IoTrophyOutline } from "react-icons/io5";
-import { MdOutlineApproval } from "react-icons/md";
-import { Link } from "react-router-dom";
-import about4 from "../../Assests/About/about4.png";
 import tutor1 from "../../Assests/About/tutor1.PNG";
 import tutor2 from "../../Assests/About/tutor2.PNG";
 import tutor3 from "../../Assests/About/tutor3.PNG";
-
-const Aboutstart = () => {
+const Aboutmiddle = () => {
   const FeatureTutor = [
     {
       name: "Zainul Abidin",
@@ -35,15 +31,16 @@ const Aboutstart = () => {
   ];
   return (
     <>
-      {/* 1st part */}
-      <div className="container_fluid about_upper">
+      {/*3rd part  */}
+      <div className="container-fluid">
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
+         
+          <div className="col-md-6">
               <div className="about_left">
                 <h2 className="text-warning">Our Services</h2>
                 <span className="fs-4">What we do</span>
-                <h1 className="about_main_heading">
+                <h1 className="fs-1 about_main_heading">
                   Learn Something New and Grow Your Skills
                 </h1>
                 <p className="about_sub_heading">
@@ -52,6 +49,7 @@ const Aboutstart = () => {
                   WE Blieve that every one has capacity to creative, Turitor is
                   a place where people Develop their own potential so booked
                   your first lesson
+                
                 </p>
                 <Link to="/ourcourse" className="btn intro_btn1">
                   View Courses
@@ -61,76 +59,22 @@ const Aboutstart = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-md-6">
-              <div className="about_right">
-                <img src={about4} alt="" className="abouttop_image" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* 2nt part */}
-      <div className="container_fluid about_back ">
-        <div className="container ">
-          <div className="about_back1">
-            <span className="text-light">All Tutor Are Guaranteed by Us </span>
-            <h1 className="aboutback_heading">
-              100% <span style={{ color: "#f46b3e" }}>Guarantee</span>
-            </h1>
-            <div className="table_section">
-              <div className="row">
-                <div className="col-md-1 ">
-                  <IoSchoolOutline className="table_icon" />
-                </div>
-                <div className="col-md-3">
-                  <h2 className="table_heading">Professional Tutor</h2>
-                  <p className="mt-2 text-white">
-                    Professional teachers have training as educators and/or
-                    extensive professional teaching experience
-                  </p>
-                </div>
-                <div className="col-md-1">
-                  <IoTrophyOutline className="table_icon" />
-                </div>
-                <div className="col-md-3">
-                  <h2 className="table_heading">Real Result Only</h2>
-                  <p className="mt-2 text-white">
-                    Real result measures that indicate how much work is done and
-                    define what is produced.
-                  </p>
-                </div>
-                <div className="col-md-1 ">
-                  <MdOutlineApproval className="table_icon" />
-                </div>
-                <div className="col-md-3">
-                  <h2 className="table_heading">University Approve</h2>
-                  <p className="mt-2 text-white">
-                    {" "}
-                    A certified teacher is an educator who has earned
-                    credentials from an authoritative source, such as the
-                    government.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* 3rd part */}
-      <div className="container_fluid about_upper">
-        <div className="container">
-          <div className="row">
             <div className="col-md-6 ">
               <div className="about_tutor_left">
                 <img src={about1} alt="" />
               </div>
             </div>
+            {/* <div className="col-md-6 ">
+              <div className="about_tutor_left">
+                <img src={about1} alt="" />
+              </div>
+            </div>
             <div className="col-md-6">
-              <div className="about_left">
-                <h1 className="about_main_heading">
+              <div className="about_tutor_right">
+                <h1 className="about_tutor_main_heading">
                   We are Tutor and Online Learning Community
                 </h1>
-                <p className="about_sub_heading">
+                <p className="about_tutor_heading mt-3">
                   Professional teachers have training as educators and/or
                   extensive professional teaching experience. Teachers who spend
                   more time focusing on private lessons than regular classes can
@@ -138,60 +82,62 @@ const Aboutstart = () => {
                   Situations in which teachers provide extra private lessons for
                   pupils for whom they are already responsible in the public
                   system can lead to corruption.
+                  </p>
+                  <div className="row mt-4">
+                    <div className="col-6 text-center">
+                      <h5>
+                        {" "}
+                        <CheckOutlined className="about_tutor_icon" /> Expert
+                        training
+                      </h5>
+                    </div>
+                    <div className="col-6">
+                      <h5>
+                        {" "}
+                        <CheckOutlined className="about_tutor_icon" /> Life Time
+                        Access
+                      </h5>
+                    </div>
+                  </div>
+                  <div className="row mt-2">
+                    <div className="col-6 text-center">
+                      <h5>
+                        {" "}
+                        <CheckOutlined className="about_tutor_icon" /> Remote
+                        Learning
+                      </h5>
+                    </div>
+                    <div className="col-6">
+                      <h5>
+                        {" "}
+                        <CheckOutlined className="about_tutor_icon" /> Self
+                        Development
+                      </h5>
+                    </div>
+                  </div>
+                 
                
-                <div className="row mt-4">
-                  <div className="col-6 text-center">
-                    <h5>
-                      {" "}
-                      <CheckOutlined className="about_tutor_icon" /> Expert
-                      training
-                    </h5>
-                  </div>
-                  <div className="col-6">
-                    <h5>
-                      {" "}
-                      <CheckOutlined className="about_tutor_icon" /> Life Time
-                      Access
-                    </h5>
-                  </div>
-                </div>
-                <div className="row mt-2">
-                  <div className="col-6 text-center">
-                    <h5>
-                      {" "}
-                      <CheckOutlined className="about_tutor_icon" /> Remote
-                      Learning
-                    </h5>
-                  </div>
-                  <div className="col-6">
-                    <h5>
-                      {" "}
-                      <CheckOutlined className="about_tutor_icon" /> Self
-                      Development
-                    </h5>
-                  </div>
-                </div>
-                </p>
-                <Link to="/ourcourse" className="btn intro_btn1 mt-4">
+                <Link to="/ourcourse" className="btn intro_btn1 mt-5">
                   View Courses
                 </Link>
-                <Link to="/findtutor" className="btn  intro_btn2 mt-4 ms-2">
+                <Link to="/findtutor" className="btn  intro_btn2 mt-5 ms-2">
                   Find Your Tutor
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       {/* 4th part */}
-      <div className="container_fluid featuretutor_back ">
+
+      <div className="container_fluid featuretutor_back">
         <div className="container">
-        <div className="feature_text">
+          <div className="feature_text">
             <span>Find the Right tutor for you</span>
             <h1 className="feature_heading">Featured Tutors</h1>
           </div>
-          <div className="featuretutor_section mt-3 ">
-          <div className="row">
+          <div className="featuretutor_section mt-4">
+            <div className="row">
               {FeatureTutor.map((item) => {
                 return (
                   <>
@@ -227,9 +173,9 @@ const Aboutstart = () => {
             </div>
           </div>
         </div>
-        </div>
-        {/* 5th part */}
-        <div className="container_fluid apply_back">
+      </div>
+      {/* 5th section */}
+      <div className="container_fluid apply_back">
         <div className="container">
           <h1 className="apply_heading ms-2 ">
             Apply <span className="text-warning"> Now</span>{" "}
@@ -258,4 +204,4 @@ const Aboutstart = () => {
   );
 };
 
-export default Aboutstart;
+export default Aboutmiddle;

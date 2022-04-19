@@ -20,14 +20,20 @@ import ProtectedRoutes from "./Routes/ProtectedRoutes";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import EditProfilePage from "./pages/EditProfilePage";
-import DotLoader from "react-spinners/DotLoader";
+import GridLoader from "react-spinners/GridLoader";
 
 const override = css`
   display: block;
   margin: 0 auto;
-  margin-top:16%;
-  border-color: red;
+  margin-top:20%;
+  @media screen and (max-width:768px){
+    margin-top:120%;
+  }
 `;
+ 
+
+
+
 function App() {
   const [loading,setLoading] = useState(false)
   // let [loading, setLoading] = useState(true);
@@ -40,15 +46,17 @@ function App() {
   }, []);
 
   return (
+    
     <>
       <div className="App">
         {loading ? (
-          <DotLoader
+          <GridLoader
             color={"#ffcc00"}
             loading={loading}
-            className="preloader"
-            size={150}
-             css={override}
+            className="override"
+             size={20}
+            css={override}
+            
           />
         ) : (
           <>

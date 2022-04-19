@@ -183,7 +183,7 @@ const Course = () => {
                         </p>
                       </div>
                       <button
-                        className="card_arrow btn"
+                        className="card_arrow"
                         onClick={() => {
                           navigate(`/detail/download/${item.id}/${item.name}`, {
                             state: [

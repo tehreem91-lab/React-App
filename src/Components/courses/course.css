@@ -20,14 +20,10 @@
 }
 
 
-.m_arrow
-{
-    margin-left: 5px;
-}
+
 .card {
   width: 20%;
-  height: 320px;
-  padding: 27px;
+  padding: 23px;
   transition: 1s;
   margin: 10px;
 }
@@ -46,14 +42,7 @@
   font-size: 25px;
   margin-top: 20px;
 }
-.card_arrow {
-  width: 50px;
-  margin-top: 20px;
-  padding: 10px;
-  margin-left: 175px;
-  background-color: gainsboro;
-  border: 1px solid gainsboro;
-}
+
 .card1 {
   border-radius: 2%;
   margin-top: 2%;
@@ -69,39 +58,52 @@
   border-style: double;
   background-color: #0d355f;
 }
+.card_arrow
+{
+  padding: 10px;
+  margin-left: 160px;
+  font-size: 15px;
+  border: 1px solid gainsboro;
+  background-color:gainsboro ;
+}
+.m_arrow
+{
+  margin: auto;
+}
+
 @media screen and (max-width: 768px) {
   .card-back {
     height: 650px;
   }
   .class-heading {
     margin-left: 6%;
-    margin-top: 30%;
+    margin-top: 26%;
     position: relative;
   }
   .card {
-    width: 42%;
-    height: 200px;
-    padding: 11px;
+    width: 43%;
+    height: 180px;
+    padding: 16px;
     font-size: 9px;
-    height: 175px;
     justify-content: center;
   }
   .card_icons {
     font-size: 20px;
-    padding: 5px;
+    margin-top: 15px;
   }
   .card_heading {
-    font-size: 15px;
+    font-size: 11px;
+    font-weight: bold;
     margin-top: 10px;
   }
-  .card_arrow {
-    width: 30px;
-    padding: 5px;
-     margin-left: 100px;
-   
-  }
-  .m_arrow
+ 
+  .card_arrow
 {
-    margin-left: 0px;
+
+  width: 28px;
+  padding: 4px;
+  font-size: 10px;
+  margin-top: 10px;
+  margin-left: 75px;
 }
 }

@@ -156,9 +156,11 @@ function Contactus() {
                   </div>
                   <div className="row">
                     <div className="col-md-12">
+                      <div className="C_B">
                       <button className="contact-button" onClick={MESSAGE}>
                         Send Message
                       </button>
+                      </div>
                     </div>
                   </div>
                 </form>

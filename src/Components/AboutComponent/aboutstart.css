@@ -110,6 +110,33 @@
     font-weight: bold;
     color: #0d355f;
   }
+  .main_apply {
+    margin: auto;
+    height: 65vh;
+    margin-top: 30px;
+    border-radius: 5px;
+    background: url("/src/Assests/About/tutor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .apply_now {
+    height: 350px;
+    margin-left: 50%;
+    position: relative;
+    top: 70px;
+    border-radius: 5px;
+    text-align: justify;
+    padding: 50px;
+  }
+  .apply_back {
+    margin-top: 6%;
+  }
+  .apply_heading {
+    font-weight: bold;
+    font-size: 25px;
+    color: #0d355f;
+  }
 /* .table_image
 {
     width: 800px;
@@ -195,6 +222,19 @@
   }
   .feature_heading {
     font-size: 30px;
+  }
+  .apply_back {
+    margin-top: 20%;
+  }
+  .apply_now {
+    top: 0px;
+    margin-left: 0px;
+  }
+  .main_apply {
+    background: url("/src/Assests/About/change.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
  
  
