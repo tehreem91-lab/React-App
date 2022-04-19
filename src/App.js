@@ -27,7 +27,7 @@ const override = css`
   margin: 0 auto;
   margin-top:20%;
   @media screen and (max-width:768px){
-    margin-top:120%;
+    margin-top:97%;
   }
 `;
  

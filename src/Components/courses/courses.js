@@ -12,50 +12,7 @@ const Course = () => {
 
   return (
     <>
-      {/* Nine Class Card */}
-      {/* <div>
-        <div className="container-fluid">
-          <div className="container">
-            {" "}
-            <br />
-            <h1 className="class-heading  ">Class 9th</h1>
-          </div>
-        </div>
-        <div className="container-fluid">
-          <div className="container ">
-            <div className="card-container">
-              {NineClass.map((item) => {
-                return (
-                  <>
-                    <Card
-                      style={{ width: "18rem" }}
-                      className="text-center  card1"
-                      onClick={() => {
-                        navigate(`/detail/download/${item.id}/${item.name}`, {
-                          state: [
-                            item.image,
-                            item.author,
-                            item.edition,
-                            item.downloads,
-                            item.book,
-                            item.keybook,
-                          ],
-                        });
-                      }}
-                    >
-                      <Card.Body>
-                        <Card.Title className="mt-2">
-                          <h4 style={{ color: "white" }}>{item.name}</h4>{" "}
-                        </Card.Title>
-                      </Card.Body>
-                    </Card>
-                  </>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div> */}
+     
       {/* 9th class */}
       <div>
         <div className="container-fluid">
@@ -69,7 +26,22 @@ const Course = () => {
               {NineClass.map((item) => {
                 return (
                   <>
-                    <div className="card bg-white">
+                    <div className="card bg-white"
+                    
+                    onClick={() => {
+                      navigate(`/detail/download/${item.id}/${item.name}`, {
+                        state: [
+                          item.image,
+                          item.author,
+                          item.edition,
+                          item.downloads,
+                          item.book,
+                          item.keybook,
+                        ],
+                      });
+                    }}
+                    
+                    >
                       <div className="card_icon">
                         <h4 className="card_icons">{item.icon}</h4>
                       </div>
@@ -183,7 +155,7 @@ const Course = () => {
                         </p>
                       </div>
                       <button
-                        className="card_arrow"
+                        className="card_arrow btn"
                         onClick={() => {
                           navigate(`/detail/download/${item.id}/${item.name}`, {
                             state: [

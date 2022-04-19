@@ -2,8 +2,7 @@
 
 .main_wrapper {
   background-color: #43626f;
-   height: 100vh; 
-   
+   height: 800px; 
   background-image: url('/src/Assests/pattern.png');
 }
 
@@ -129,6 +128,10 @@
  .IMAGE 
 {
      display: none;
+}
+.main_wrapper
+{
+  height: 820px;
 }
 
 }
