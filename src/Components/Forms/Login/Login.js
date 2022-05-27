@@ -99,7 +99,7 @@ export default function Login() {
                       prefix={<KeyOutlined />}
                       className="input_field"
                       size="large"
-                      type="email"
+                      type="password"
                       value={password}
                       onChange={(e) => setpassword(e.target.value)}
                     />

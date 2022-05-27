@@ -12,7 +12,7 @@ import Feedback from "./Components/HomeComponent/Feedback/feedback";
 import LoginPage from "./pages/LoginPage";
 import DetailPage from "./pages/DetailPage";
 import PrivateRoute from "../src/Routes/PrivateRoute";
-//import ChatPage from "./pages/ChatPage";
+import ChatPage from "./pages/ChatPage";
 import ProfilePage from "./pages/profilePage";
 import "./App.css";
 import { css } from "@emotion/react";
@@ -75,7 +75,7 @@ function App() {
               />
               {/* Routes which are only shown on login  */}
               <Route element={<ProtectedRoutes />}>
-                {/* <Route path="/chat" element={<ChatPage />} /> */}
+                <Route path="/chat" element={<ChatPage />} />
                 <Route path="/profile/:id" element={<ProfilePage />} />
                 <Route path="edit-profile/:id" element={<EditProfilePage />} />
               </Route>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Calendar from 'react-calendar'
 import "./tutorsearch.css";
 import { Link} from "react-router-dom";
-// import {Link} from "react-router-dom";
 import 'react-calendar/dist/Calendar.css';
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
@@ -159,9 +158,9 @@ const Tutorsearch = () => {
                                         {data.subject}
                                       </div>
                                       <div className="col-md-4 text-center">
-                                        <button className="btn tutor_message ">
+                                        <Link to='/chat' className="btn tutor_message " >
                                           Mesaage
-                                        </button>
+                                        </Link>
                                       </div>
                                     </div>
                                   </div>
